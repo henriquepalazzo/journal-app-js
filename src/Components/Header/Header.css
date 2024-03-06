@@ -1,0 +1,11 @@
+header {
+  background-color: #ccc;
+  padding: 1rem 0;
+}
+h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
