@@ -6,6 +6,7 @@ import "./EntryForm.css";
 export default function EntryForm() {
   return (
     <>
+      <h2>New Entry</h2>
       <form action="" className="form">
         <InputField />
         <TextareaField />
