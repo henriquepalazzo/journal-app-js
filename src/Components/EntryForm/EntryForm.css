@@ -1,0 +1,20 @@
+.form {
+}
+.form-input,
+.form-textarea,
+.form-button {
+  margin: 0 0 2rem;
+  width: 100%;
+  min-height: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.form-textarea {
+  resize: none;
+}
+label {
+  font-size: 0.9rem;
+  margin: 0 0 5px 5px;
+  color: #666;
+}
