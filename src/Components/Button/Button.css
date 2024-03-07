@@ -1,0 +1,17 @@
+button.form-button {
+  font-size: 1rem;
+  background-color: var(--color-nemo);
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  width: auto;
+  margin: 0 auto;
+  padding: 13px 35px;
+  justify-self: center;
+}
+button:active {
+  background-color: var(--color-nemo-mid);
+}
+button:hover {
+  background-color: var(--color-nemo-dark);
+}
