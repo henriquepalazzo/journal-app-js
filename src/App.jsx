@@ -2,6 +2,7 @@ import "./App.css";
 import EntryForm from "./Components/EntryForm/EntryForm";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import TabBar from "./Components/TabBar/TabBar";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </Header>
       <main>
         <EntryForm />
+        <TabBar />
       </main>
       <Footer />
     </>

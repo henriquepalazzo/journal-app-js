@@ -1,0 +1,20 @@
+.tab {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 25px;
+}
+.tab.active {
+  color: var(--color-nemo);
+}
+.tab span {
+  font-size: 0.8rem;
+  background-color: #ccc;
+  color: #fff;
+  padding: 2px 9px 2px;
+  margin: 0 0 0 3px;
+  border-radius: 15px;
+  font-weight: normal;
+}
+.tab.active span {
+  background-color: var(--color-nemo);
+}
