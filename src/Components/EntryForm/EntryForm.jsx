@@ -5,13 +5,13 @@ import "./EntryForm.css";
 
 export default function EntryForm() {
   return (
-    <>
+    <div className="entry-form">
       <h2>New Entry</h2>
       <form action="" className="form">
         <InputField />
         <TextareaField />
         <Button />
       </form>
-    </>
+    </div>
   );
 }
