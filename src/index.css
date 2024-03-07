@@ -6,6 +6,18 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Used for texts (+ footer background) */
+  --color-granite: #252629;
+  /* Used for backgrounds (+ footer text color) */
+  --color-foam: #ffffff;
+  /* Used for buttons, icons, etc. */
+  --color-nemo: #ff4a11;
+  /* active color for buttons, icons, etc. */
+  --color-nemo-mid: #ff5c29;
+  /* hover color for buttons, icons, etc. */
+  --color-nemo-dark: #e5430f;
+  /* Used for borders and some backgrounds */
+  --color-water-10: #e4e8f0;
 }
 * {
   box-sizing: border-box;
@@ -27,5 +39,8 @@ body {
 }
 
 main {
-  margin: 20px 1rem 0;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
 }
