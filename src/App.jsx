@@ -15,6 +15,7 @@ function App() {
       motto: "We are in a state of chaos",
       notes:
         "Today I learned about React State. It was fun! I can't wait to learn more.",
+      isFavorite: false,
     },
     {
       id: 999,
@@ -22,6 +23,7 @@ function App() {
       motto: "Props, Props, Props",
       notes:
         "Today I learned about React Props. Mad props to everyone who understands this!",
+      isFavorite: false,
     },
     {
       id: 998,
@@ -29,12 +31,14 @@ function App() {
       motto: "How to nest components online fast",
       notes:
         "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+      isFavorite: false,
     },
     {
       id: 997,
       date: "Feb 2, 2025",
       motto: "I'm a React Developer",
       notes: "My React-ion when I learned about React: 😍",
+      isFavorite: false,
     },
   ];
   const [entries, setEntries] = useState(initialEntries);
