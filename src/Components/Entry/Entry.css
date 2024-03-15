@@ -7,6 +7,10 @@ section.entry .date {
   align-self: center;
   margin: 10px 0;
 }
+section.entry .entry__motto-container {
+  display: flex;
+  justify-content: space-between;
+}
 section.entry h2 {
   margin: 10px 0;
   font-size: 1.2rem;
