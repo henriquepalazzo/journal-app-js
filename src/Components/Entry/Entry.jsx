@@ -1,12 +1,23 @@
 import "./Entry.css";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
-export default function Entry({ entry: { date, motto, notes } }) {
+export default function Entry({
+  entry: { date, motto, notes },
+  onToggleFavorite,
+  isFavorite,
+  id,
+}) {
   return (
     <section className="entry">
-      <FavoriteButton />
       <div className="date">{date}</div>
-      <h2>{motto}</h2>
+      <div className="entry__motto-container">
+        <h2>{motto}</h2>
+        <FavoriteButton
+          onToggleFavorite={onToggleFavorite}
+          isFavorite={isFavorite}
+          id={id}
+        />
+      </div>
       <p>{notes}</p>
     </section>
   );

@@ -21,6 +21,15 @@ function App() {
     ]);
   }
 
+  function handleToggleFavorite(id) {
+    setEntries(
+      entries.map((entry) => {
+        if (entry.id === id) entry.isFavorite = !entry.isFavorite;
+        return entry;
+      })
+    );
+  }
+
   return (
     <>
       <Header>
@@ -29,7 +38,7 @@ function App() {
       <main>
         <EntryForm onAddEntry={handleAddEntry} />
         <TabBar />
-        <Entries entries={entries} />
+        <Entries entries={entries} onToggleFavorite={handleToggleFavorite} />
       </main>
       <Footer />
     </>
