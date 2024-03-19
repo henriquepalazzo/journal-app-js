@@ -1,6 +1,5 @@
 import "./App.css";
 import { uid } from "uid";
-import { useState } from "react";
 import Entries from "./Components/Entries/Entries";
 import EntryForm from "./Components/EntryForm/EntryForm";
 import Footer from "./Components/Footer/Footer";
