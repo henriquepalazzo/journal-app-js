@@ -7,9 +7,12 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import TabBar from "./Components/TabBar/TabBar";
 import { initialEntries } from "./data/initialEntries";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-  const [entries, setEntries] = useState(initialEntries);
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
 
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {
