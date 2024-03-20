@@ -1,21 +1,12 @@
 import "./Tab.css";
 
-export default function Tab({
-  text,
-  total,
-  active = false,
-  onTabClick,
-  favorite,
-}) {
+export default function Tab({ text, total, onTabClick, favorite }) {
   console.log(favorite);
   return (
     <>
       <div
         className={`tab ${
-          (text === "Favorites" && favorite) ||
-          (text === "All Entries" && !favorite)
-            ? "active"
-            : ""
+          text === (favorite ? "Favorites" : "All Entries") ? "active" : ""
         }`}
         onClick={() => onTabClick(text)}
       >
