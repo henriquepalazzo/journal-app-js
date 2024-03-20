@@ -7,11 +7,17 @@ import Header from "./Components/Header/Header";
 import TabBar from "./Components/TabBar/TabBar";
 import { initialEntries } from "./data/initialEntries";
 import useLocalStorageState from "use-local-storage-state";
+import { useState } from "react";
 
 function App() {
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: initialEntries,
   });
+  const [favorite, setFavorite] = useState(false);
+
+  const filteredEntries = favorite
+    ? entries.filter((entry) => entry.isFavorite)
+    : entries;
 
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {
@@ -32,6 +38,10 @@ function App() {
     );
   }
 
+  function handleTabClick(type) {
+    setFavorite(type === "Favorites" ? true : false);
+  }
+
   return (
     <>
       <Header>
@@ -39,8 +49,11 @@ function App() {
       </Header>
       <main>
         <EntryForm onAddEntry={handleAddEntry} />
-        <TabBar />
-        <Entries entries={entries} onToggleFavorite={handleToggleFavorite} />
+        <TabBar onTabClick={handleTabClick} favorite={favorite} />
+        <Entries
+          entries={filteredEntries}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </main>
       <Footer />
     </>
