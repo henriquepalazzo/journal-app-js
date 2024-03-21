@@ -15,9 +15,8 @@ function App() {
   });
   const [favorite, setFavorite] = useState(false);
 
-  const filteredEntries = favorite
-    ? entries.filter((entry) => entry.isFavorite)
-    : entries;
+  const favEntries = entries.filter((entry) => entry.isFavorite);
+  const filteredEntries = favorite ? favEntries : entries;
 
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {
@@ -49,7 +48,12 @@ function App() {
       </Header>
       <main>
         <EntryForm onAddEntry={handleAddEntry} />
-        <TabBar onTabClick={handleTabClick} favorite={favorite} />
+        <TabBar
+          onTabClick={handleTabClick}
+          totalEntries={entries.length}
+          totalFavs={favEntries.length}
+          favorite={favorite}
+        />
         <Entries
           entries={filteredEntries}
           onToggleFavorite={handleToggleFavorite}

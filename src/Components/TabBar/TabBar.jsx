@@ -1,18 +1,23 @@
 import Tab from "../Tab/Tab";
 import "./TabBar.css";
 
-export default function TabBar({ onTabClick, favorite }) {
+export default function TabBar({
+  onTabClick,
+  favorite,
+  totalEntries,
+  totalFavs,
+}) {
   return (
     <div className="tab-bar">
       <Tab
         text={"All Entries"}
-        total={3}
+        total={totalEntries}
         onTabClick={onTabClick}
         favorite={favorite}
       />
       <Tab
         text={"Favorites"}
-        total={1}
+        total={totalFavs}
         onTabClick={onTabClick}
         favorite={favorite}
       />
