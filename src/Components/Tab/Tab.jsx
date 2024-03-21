@@ -1,7 +1,6 @@
 import "./Tab.css";
 
 export default function Tab({ text, total, onTabClick, favorite }) {
-  console.log(favorite);
   return (
     <>
       <div
